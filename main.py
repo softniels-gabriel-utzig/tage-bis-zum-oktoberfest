@@ -23,13 +23,13 @@ def get_date_difference():
     return (list(map(round,[days, hours, minutes])))
 
 def get_music():
-    with open('musics.json', 'r') as json_file:
+    with open('musics.json', 'r', encoding="utf8") as json_file:
         json_data = json.load(json_file)
     music = random.choice(json_data)
     return music['music'] 
 
 def get_message():
-    with open('messages.json', 'r') as json_file:
+    with open('messages.json', 'r',encoding="utf8") as json_file:
         json_data = json.load(json_file)
     message = random.choice(json_data)
     return message['message'] 
